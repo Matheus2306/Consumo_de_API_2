@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="text-center">
     <div class="container">
       <h1 class="my-3">Exemplo 2: Consumo de API e Gráficos do Google</h1>
       <p>
@@ -22,19 +22,22 @@
       </p>
       <hr class="my-3" />
       <h3 class="my-3">Obter dados do Bitcoin via API</h3>
-      <button class="btn btn-outline-light" onclick="carregardados()">
+      <button id="btn" class="btn my-3" onclick="carregardados()">
         Obter Dados
       </button>
       <div id="div-erro" class="alert alert-danger"></div>
-      <div id="dados">
-        <h3>Variação de Valores</h3>
-        <div id="Grafico-preços" class="area-grafico"></div>
-        <h3>Variação de Negociações</h3>
-        <div id="Grafico-Volume" class="area-grafico"></div>
+      <div id="dados" class="my-3">
+        <h3 class="my-3">Variação de Valores</h3>
+        <div id="Grafico-precos" class="area-grafico mt-3"></div>
+        <h3 class="my-3">Variação de Negociações</h3>
+        <div id="Grafico-Volume" class="area-grafico mt-3"></div>
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script
+    type="text/javascript"
+    src="https://www.gstatic.com/charts/loader.js"
+  ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"

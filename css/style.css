@@ -2,4 +2,32 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #fff, #d6ff85);
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
+}
+
+.area-grafico{
+  height: 450px;
+  margin-bottom: 50px;
+}
+
+#btn{
+  background: #90dfac;
+  color: #fff;
+}
+#btn:hover{
+  background: #6dbb8f;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
