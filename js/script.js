@@ -2,11 +2,16 @@ $(document).ready(function () {
   //ocultar a div erro
   $("#div-erro").hide();
   $("#Grafico-precos").hide();
+  $("#Grafico-Volume").hide();
+  $("#linhaSepara").hide();
+  $(".titleDado").hide();
   async function carregardados() {
     try {
       $("#Grafico-precos").show();
       $("#div-erro").hide();
+      $("#linhaSepara").show();
       $("#Grafico-Volume").show();
+      $(".titleDado").show();
       //carregar os dados
       const response = await fetch(
         "https://www.mercadobitcoin.net/api/BTC/trades/"
@@ -22,6 +27,14 @@ $(document).ready(function () {
       $("#div-erro").show();
       $("#div-erro").html("<h1>Erro ao carregar os dados</h1>");
     }
+  }
+
+  async function apagardados() {
+    $("#div-erro").hide();
+    $("#Grafico-Volume").hide();
+    $("#Grafico-precos").hide();
+    $("#linhaSepara").hide();
+    $(".titleDado").hide();
   }
 
   prepararMapas = (dados) => {
@@ -81,4 +94,5 @@ $(document).ready(function () {
   };
   // tornar a função acessível globalmente
   window.carregardados = carregardados;
+  window.apagardados = apagardados;
 });

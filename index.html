@@ -15,21 +15,27 @@
   </head>
   <body class="text-center">
     <div class="container">
-      <h1 class="my-3">Exemplo 2: Consumo de API e Gráficos do Google</h1>
+      <h1 id="title" class="my-3">
+        Exemplo 2: Consumo de API e Gráficos do Google
+      </h1>
       <p>
         O objetivo desse exemplo, é consumir a API REST e exibir os dados em
         graficos do Google Charts
       </p>
       <hr class="my-3" />
       <h3 class="my-3">Obter dados do Bitcoin via API</h3>
-      <button id="btn" class="btn my-3" onclick="carregardados()">
+      <button id="btn" class="btn my-3 m-5" onclick="carregardados()">
         Obter Dados
+      </button>
+      <button id="btn" class="btn my-3 m-5" onclick="apagardados()">
+        Limpar Dados
       </button>
       <div id="div-erro" class="alert alert-danger"></div>
       <div id="dados" class="my-3">
-        <h3 class="my-3">Variação de Valores</h3>
+        <h3 class="my-3 titleDado">Variação de Valores</h3>
         <div id="Grafico-precos" class="area-grafico mt-3"></div>
-        <h3 class="my-3">Variação de Negociações</h3>
+        <hr id="linhaSepara" class="my-3" />
+        <h3 class="my-3 titleDado">Variação de Negociações</h3>
         <div id="Grafico-Volume" class="area-grafico mt-3"></div>
       </div>
     </div>
